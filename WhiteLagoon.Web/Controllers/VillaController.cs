@@ -17,5 +17,13 @@ namespace WhiteLagoon.Web.Controllers
             var villas = _db.Villas.ToList();
             return View(villas);
         }
+
+        public IActionResult Create()
+        {
+            // We don't need to pass anything into the view, because the Villa has no info yet.
+            // If there were default parameters that needed to be populated, then we would have to
+            //      create an object and pass that in.
+            return View();
+        }
     }
 }

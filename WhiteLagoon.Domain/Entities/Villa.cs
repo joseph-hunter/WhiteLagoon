@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -14,6 +15,7 @@ namespace WhiteLagoon.Domain.Entities
         public double Price { get; set; }
         public int Sqft { get; set; }
         public int Occupancy { get; set; }
+        [Display(Name = "Image URL")]
         public string? ImageUrl { get; set; }
         public DateTime? CreatedDate { get; set; }
         public DateTime? UpdatedDate { get; set; }
