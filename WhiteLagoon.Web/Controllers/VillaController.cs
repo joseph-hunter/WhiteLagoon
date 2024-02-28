@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using WhiteLagoon.Domain.Entities;
 using WhiteLagoon.Infrastructure.Data;
 
 namespace WhiteLagoon.Web.Controllers
@@ -20,9 +21,18 @@ namespace WhiteLagoon.Web.Controllers
 
         public IActionResult Create()
         {
-            // We don't need to pass anything into the view, because the Villa has no info yet.
-            // If there were default parameters that needed to be populated, then we would have to
-            //      create an object and pass that in.
+
+            return View();
+        }
+        [HttpPost]
+        public IActionResult Create(Villa obj) 
+        {
+            if (ModelState.IsValid)
+            {
+                _db.Villas.Add(obj);
+                _db.SaveChanges();
+                return RedirectToAction("Index");
+            }
             return View();
         }
     }

@@ -11,15 +11,50 @@
     <div class="card-body border pd-4">
         <form method="post" class="row">
             <div class="p-3">
-                <div class="form-floating py-2 col-12">
-                    <input asp-for="Name" class="form-control border shadow" />
-                    <label asp-for="Name" class-"ms-2"></label>
+                <div class="form-group">
+                    <label asp-for="Name">Name</label>
+                    <input asp-for="Name" class="form-control" />
+                    <span asp-validation-for="Name" class="text-danger"></span>
                 </div>
-                <div class="form-floating py-2 col-12">
-                    <input asp-for="ImageUrl" class="form-control border shadow" />
-                    <label asp-for="ImageUrl" class-"ms-2"></label>
+
+                <div class="form-group">
+                    <label asp-for="Description">Description</label>
+                    <textarea asp-for="Description" class="form-control"></textarea>
                 </div>
-                <!-- Instead of writing these all manually, can i use a razor loop? *Video 45*-->
+
+                <div class="form-group">
+                    <label asp-for="Price">Price</label>
+                    <input asp-for="Price" class="form-control" />
+                    <span asp-validation-for="Price" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="Sqft">Square Feet</label>
+                    <input asp-for="Sqft" class="form-control" />
+                    <span asp-validation-for="Sqft" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="Occupancy">Occupancy</label>
+                    <input asp-for="Occupancy" class="form-control" />
+                    <span asp-validation-for="Occupancy" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="ImageUrl">Image URL</label>
+                    <input asp-for="ImageUrl" class="form-control" />
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="CreatedDate">Created Date</label>
+                    <input asp-for="CreatedDate" type="date" class="form-control" />
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="UpdatedDate">Updated Date</label>
+                    <input asp-for="UpdatedDate" type="date" class="form-control" />
+                </div>
+
                 <div class="row pt-2">
                     <div class="col-6 col-md-3">
                         <button type="submit" class="btn btn-success w-100">
