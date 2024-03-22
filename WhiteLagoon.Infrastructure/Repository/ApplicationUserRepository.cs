@@ -15,7 +15,7 @@ namespace WhiteLagoon.Infrastructure.Repository
     {
         private readonly ApplicationDbContext _db;
 
-        public ApplicationUserRepository(ApplicationDbContext db) : base(db)
+        public ApplicationUserRepository(ApplicationDbContext db) : base(db) 
         {
             _db = db;
         }
